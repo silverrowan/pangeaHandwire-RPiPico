@@ -1,0 +1,10 @@
+file_format: "1"
+id: pangeaHandwire
+name: Pangea Handwire RPi Pico
+type: shield
+url: https://github.com/silverrowan/pangeaHandwire-RPiPico
+requires: [rpi_pico]
+exposes:
+features:
+  - keys
+siblings:
