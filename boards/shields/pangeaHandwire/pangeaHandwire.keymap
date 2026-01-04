@@ -7,7 +7,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-//            ---------------------------------------------------------------
+            display-name = "default";
 //            |   `   |   1   |   2   |   3   |   4   |   5   |
 //            |  ESC  |   Q   |   W   |   E   |   R   |   T   |
 //            |  TAB  |   A   |   S   |   D   |   F   |   G   |
@@ -18,7 +18,7 @@
 &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                            
 &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                            
 &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B
-&kp LGUI &kp LALT &kp LCTRL &mo LOWER  &kp RET &kp P
+&kp LGUI &kp LALT &kp LCTRL &kp SPACE  &kp RET
             >;
         };
     };
