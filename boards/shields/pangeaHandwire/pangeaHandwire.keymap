@@ -15,10 +15,10 @@
 //                        |   u   |   j   |   m   |   i   |   k   |
             bindings = <
 &kp 0 &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           
-&kp y   &kp Q  &kp W    &kp E    &kp R     &kp T                            
-&kp h   &kp A  &kp S    &kp D    &kp F     &kp G                            
-&kp n &kp Z  &kp X    &kp C    &kp V     &kp B
-&kp u &kp j &kp m &kp i  &kp k
+&kp Y &kp Q  &kp W    &kp E    &kp R     &kp T
+&kp H   &kp A  &kp S    &kp D    &kp F     &kp G                            
+&kp N &kp Z  &kp X    &kp C    &kp V     &kp B
+&kp U &kp J &kp M &kp I  &kp K
             >;
         };
     };
