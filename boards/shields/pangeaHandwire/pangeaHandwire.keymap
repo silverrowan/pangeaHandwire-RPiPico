@@ -8,17 +8,17 @@
 
         default_layer {
             display-name = "default";
-//            |   `   |   1   |   2   |   3   |   4   |   5   |
-//            |  ESC  |   Q   |   W   |   E   |   R   |   T   |
-//            |  TAB  |   A   |   S   |   D   |   F   |   G   |
-//            | LSHIFT|   Z   |   X   |   C   |   V   |   B   |
-//                        |   LGUI   |   LALT   |   LCTRL   |   LOWER   |   RET   |
+//            |   0   |   1   |   2   |   3   |   4   |   5   |
+//            |  y  |   Q   |   W   |   E   |   R   |   T   |
+//            |  h  |   A   |   S   |   D   |   F   |   G   |
+//            | n|   Z   |   X   |   C   |   V   |   B   |
+//                        |   u   |   j   |   m   |   i   |   k   |
             bindings = <
-&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           
-&kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                            
-&kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                            
-&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B
-&kp LGUI &kp LALT &kp LCTRL &kp SPACE  &kp RET
+&kp 0 &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           
+&kp y   &kp Q  &kp W    &kp E    &kp R     &kp T                            
+&kp h   &kp A  &kp S    &kp D    &kp F     &kp G                            
+&kp n &kp Z  &kp X    &kp C    &kp V     &kp B
+&kp u &kp j &kp m &kp i  &kp k
             >;
         };
     };
