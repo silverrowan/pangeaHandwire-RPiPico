@@ -18,7 +18,7 @@
                     <&pico_header 11 GPIO_ACTIVE_HIGH>,
                     <&pico_header 15 GPIO_ACTIVE_HIGH>;
 
-        col-gpios = <&pico_header 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        col-gpios = <&pico_header 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
