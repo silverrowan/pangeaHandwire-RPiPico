@@ -24,6 +24,7 @@
                     <&pico_header 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    
                     <&pico_header 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
