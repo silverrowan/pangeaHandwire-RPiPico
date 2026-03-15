@@ -24,13 +24,13 @@
                     <&pico_header 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    
+
                     <&pico_header 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pico_header 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pico_header 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;};
+                    <&pico_header 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;};
 
     default_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
