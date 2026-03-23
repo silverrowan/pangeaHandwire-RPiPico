@@ -8,20 +8,81 @@
 
         default_layer {         // layer 0
             display-name = "default";
-//|   0   |   1   |   2   |   3   |   4   |   5   |                   |   6   |   7   |   8   |   9   |   0   |   5   |
-//|   y   |   Q   |   W   |   E   |   R   |   T   |                   |   Y   |   U   |   I   |   O   |   P   |   4   |
-//|   h   |   A   |   S   |   D   |   F   |   G   |                   |   H   |   J   |   K   |   L   |   A   |   3   |
-//|   n   |   Z   |   X   |   C   |   V   |   B   |                   |   N   |   M   |   B   |   C   |   D   |   2   |
-//            |   u   |   j   |   m   |   i   |   k   |           |   E   |   F   |   G   |   V   |   W   |
+//|  n/a  |   1   |   2   |   3   |   4   |   5   |                      |   6   |   7   |   8   |   9   |   0   |  n/a  |
+//|  TAB  |   Q   |   W   |   E   |   R   |   T   |                      |   Y   |   U   |   I   |   O   |   P   |  ; :  |
+//| SHIFT |   A   |   S   |   D   |   F   |   G   |                      |   H   |   J   |   K   |   L   |  ' "  | SHIFT |
+//|  CTRL |   Z   |   X   |   C   |   V   |   B   |                      |   N   |   M   |  , <  |  . >  |  / ?  | CTRL  |
+//            |   n/a   |       |  ALT  |  RET  |       |||   n/a   |       |  SPC  |  ALT  |       |
 
             bindings = <
-&kp N0   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                  &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp N5 
-&kp Y    &kp Q    &kp W    &kp E    &kp R    &kp T                   &kp Y    &kp U    &kp I    &kp O    &kp P    &kp N4
-&kp H    &kp A    &kp S    &kp D    &kp F    &kp G                   &kp H    &kp J    &kp K    &kp L    &kp A    &kp N3
-&kp N    &kp Z    &kp X    &kp C    &kp V    &kp B                   &kp N    &kp M    &kp B    &kp C    &kp D    &kp N2
+&none       &kp N1   &kp N2   &kp N3   &kp N4   &kp N5             ||            &kp N6   &kp N7   &kp N8    &kp N9   &kp N0    &none - BSPC
+&kp TAB     &kp Q    &kp W    &kp E    &kp R    &kp T              ||            &kp Y    &kp U    &kp I     &kp O    &kp P     &kp SEMI
+&kp LSHIFT  &kp A    &kp S    &kp D    &kp F    &kp G              ||            &kp H    &kp J    &kp K     &kp L    &kp APOS  &kp RSHIFT
+&kp LCTRL   &kp Z    &kp X    &kp C    &kp V    &kp B              ||            &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RCTRL
 
-             &kp U    &kp J    &kp M    &kp I    &kp K           &kp E    &kp F    &kp G    &kp V    &kp W
+                    &none    &kp     &kp LALT     &lt 3 RET    &kp   ||  &none    &kp     &lt 2 SPACE    &kp RALT    &kp  
             >;
+//layer 2 = num & ?
+//layer 3 = programming
+//nav layer
+//function layer?
+
+
+//press and holds:                                  layer    LGUI                   RGUI    layer
+// FOR NOW ONLY : TAB HOLD -> esc
         };
     };
 };
+
+
+//|  n/a  |   1   |   2   |   3   |   4   |   5   |                       |   6   |   7   |   8   |   9   |   0   |  n/a  |
+//|  TAB  |   Q   |   W   |   E   |   R   |   T   |                       |   Y   |   U   |   I   |   O   |   P   |   ;   |
+//| SHIFT |   A   |   S   |   D   |   F   |   G   |                       |   H   |   J   |   K   |   L   |   '   | SHIFT |
+//|  CTRL |   Z   |   X   |   C   |   V   |   B   |                       |   N   |   M   |   ,   |   .   |   /   | CTRL  |
+//                           |       |  ALT  |  RET  |       |||       |  SPC  |  ALT  |  BKSP  |
+
+// SHIFT "layer" of base
+//|  n/a  |   !   |   @   |   #   |   $   |   %   |                       |   ^   |   &   |   *   |   (   |   )   |  n/a  |
+//|  TAB  |       |       |       |       |       |                       |       |       |       |       |       |   :   |
+//| SHIFT |       |       |       |       |       |                       |       |       |       |       |   "   | SHIFT |
+//|  CTRL |       |       |       |       |       |                       |       |       |   <   |   >   |   ?   | CTRL  |
+//                           |       |  ALT  |  RET  |       |||       |  SPC  |  ALT  |  BKSP  |
+
+//Legend:
+        // &kp - basic keypress behaviour
+        // &lt # a - when tapped acts as kp a, when held enables layer # 
+    //     BSPC    Backspace
+    //     SPACE   Space
+    //     RET     enter
+    //     TAB     tab
+    //     LSHIFT  left shift 
+    //     RSHIFT  right shift
+    //     ESC     escape
+
+    //     DEL     delete
+    //     INS     insert
+    
+    // Modifiers
+    //     LCTRL   left Control
+    //     RCTRL   right Control
+    //     LALT    left Alt
+    //     RALT    right Alt
+    //     LGUI    left 'gui' (win/super/cmd)
+    //     RGUI    right 'gui' (win/super/cmd)
+
+    // punctuation (standard)
+    //     COMMA   , and <
+    //     DOT     . and >
+    //     FSLH    / and ?
+    //     SEMI    ; and :
+    //     APOS    ' and "
+
+    //     EQUAL   = and +
+    //     MINUS   - and _
+    //     BSLH    \ and |
+    //     LBKT    [ and {
+    //     RBKT    ] and }
+    //     GRAVE   ` and ~
+
+    // symbols oft beside alphas ! ? ( ) : 
+    // ALMOST ALWAYS next to alphas (rarely non-alphas)    . ' " _ (,)ish
