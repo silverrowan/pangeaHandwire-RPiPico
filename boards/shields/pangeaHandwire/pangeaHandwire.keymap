@@ -20,8 +20,9 @@
 &kp LSHIFT  &kp A    &kp S    &kp D    &kp F    &kp G              ||            &kp H    &kp J    &kp K     &kp L    &kp APOS  &kp RSHIFT
 &kp LCTRL   &kp Z    &kp X    &kp C    &kp V    &kp B              ||            &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RCTRL
 
-                    &none    &kp     &kp LALT     &lt 3 RET    &kp   ||  &none    &kp     &lt 2 SPACE    &kp RALT    &kp  
+                    &none    &kp     &kp LALT     &kp RET    &kp ESC  ||  &none    &kp BSPC    &kp SPACE    &kp RALT    &kp  
             >;
+                    // &none    &kp     &kp LALT     &lt 3 RET    &kp   ||  &none    &kp     &lt 2 SPACE    &kp RALT    &kp  
 //layer 2 = num & ?
 //layer 3 = programming
 //nav layer
