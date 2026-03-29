@@ -1,55 +1,54 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 //#include <dt-bindings/zmk/bt.h>
+#include "zmk-helpers/helper.h"
 
-/ {
-    keymap {
-        compatible = "zmk,keymap";
+// Source desired key-position labels
+// #include "zmk-helpers/key-labels/glove80.h"
 
-        default_layer {         // layer 0
-            display-name = "default";
-//|  n/a  |   1   |   2   |   3   |   4   |   5   |                      |   6   |   7   |   8   |   9   |   0   |  n/a  |
-//|  TAB  |   Q   |   W   |   E   |   R   |   T   |                      |   Y   |   U   |   I   |   O   |   P   |  ; :  |
-//| SHIFT |   A   |   S   |   D   |   F   |   G   |                      |   H   |   J   |   K   |   L   |  ' "  | SHIFT |
-//|  CTRL |   Z   |   X   |   C   |   V   |   B   |                      |   N   |   M   |  , <  |  . >  |  / ?  | CTRL  |
-//            |   n/a   |       |  ALT  |  RET  |       |||   n/a   |       |  SPC  |  ALT  |       |
+// Source unicode-chars for desired languages
+// #include "zmk-helpers/unicode-chars/german.dtsi"
 
-            bindings = <
+// ZMK_COMBO(name, bindings, keypos, layers, timeout, prior_idle, extra)
+// // combos
+// ZMK_COMBO(sleep,    &win_sleep,  RT3 RT4, NAV)  // put Windows to sleep, only active on NAV layer
+// ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
+// ZMK_COMBO(paste,    &kp LS(INS), LB1 LB2, ALL)  // paste, active on all layers
+
+
+//KEYMAP
+ZMK_LAYER(default_layer,
+//|   `   |   1   |   2   |   3   |   4   |   5   |                       |   6   |   7   |   8   |   9   |   0   |  BKS  |
+//|  TAB  |   Q   |   W   |   E   |   R   |   T   |                       |   Y   |   U   |   I   |   O   |   P   |   ;   |
+//| SHIFT |   A   |   S   |   D   |   F   |   G   |                       |   H   |   J   |   K   |   L   |   '   | SHIFT |
+//|  CTRL |   Z   |   X   |   C   |   V   |   B   |                       |   N   |   M   |   ,   |   .   |   /   | CTRL  |
+//              |  ESC  |  GUI  |  ALT  |  RET  |  TAB  |    |||    |  BKS  |  SPC  |  ALT  |  GUI  |  DEL  |
+
+// SHIFT "layer" of base (ignoring capital letters)
+//|   ~   |   !   |   @   |   #   |   $   |   %   |                       |   ^   |   &   |   *   |   (   |   )   |  BKS  |
+//|  TAB  |       |       |       |       |       |                       |       |       |       |       |       |   :   |
+//| SHIFT |       |       |       |       |       |                       |       |       |       |       |   "   | SHIFT |
+//|  CTRL |       |       |       |       |       |                       |       |       |   <   |   >   |   ?   | CTRL  |
+//              |  ESC  |  GUI  |  ALT  |  RET  |  TAB  |    |||    |  BKS  |  SPC  |  ALT  |  GUI  |  DEL  |
+
 &kp GRAVE   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                         &kp N6   &kp N7   &kp N8    &kp N9   &kp N0    &kp BSPC
 &kp TAB     &kp Q    &kp W    &kp E    &kp R    &kp T                          &kp Y    &kp U    &kp I     &kp O    &kp P     &kp SEMI
 &kp LSHIFT  &kp A    &kp S    &kp D    &kp F    &kp G                          &kp H    &kp J    &kp K     &kp L    &kp APOS  &kp RSHIFT
 &kp LCTRL   &kp Z    &kp X    &kp C    &kp V    &kp B                          &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RCTRL
 
     &kp ESC    &kp LGUI      &kp LALT     &kp RET    &kp TAB            &kp BSPC    &kp SPACE    &kp RALT    &kp RGUI     &kp DEL  
-            >;
+)
 
+//PLANNING:
 //Keys to main layer Combo: </>="';:{}[]()-_ copy cut paste  rarrow
-                    // &none    &kp     &kp LALT     &lt 3 RET    &kp   ||  &none    &kp     &lt 2 SPACE    &kp RALT    &kp  
+
 //layer 2 = num & ?
 //layer 3 = programming
 //nav layer
 //function layer?
 
-
-//press and holds:                                  layer    LGUI                   RGUI    layer
+//press and holds for alternate keys: work best on layers --- but press=sticky 1 key, hold=lock, double-tap=sticky word.......layer    LGUI                   RGUI    layer
 // FOR NOW ONLY : TAB HOLD -> esc
-        };
-    };
-};
-
-
-//| GRAVE |   1   |   2   |   3   |   4   |   5   |                       |   6   |   7   |   8   |   9   |   0   |  n/a  |
-//|  TAB  |   Q   |   W   |   E   |   R   |   T   |                       |   Y   |   U   |   I   |   O   |   P   |   ;   |
-//| SHIFT |   A   |   S   |   D   |   F   |   G   |                       |   H   |   J   |   K   |   L   |   '   | SHIFT |
-//|  CTRL |   Z   |   X   |   C   |   V   |   B   |                       |   N   |   M   |   ,   |   .   |   /   | CTRL  |
-//                           |       |  ALT  |  RET  |       |||       |  SPC  |  ALT  |  BKSP  |
-
-// SHIFT "layer" of base
-//| GRAVE |   !   |   @   |   #   |   $   |   %   |                       |   ^   |   &   |   *   |   (   |   )   |  n/a  |
-//|  TAB  |       |       |       |       |       |                       |       |       |       |       |       |   :   |
-//| SHIFT |       |       |       |       |       |                       |       |       |       |       |   "   | SHIFT |
-//|  CTRL |       |       |       |       |       |                       |       |       |   <   |   >   |   ?   | CTRL  |
-//                           |       |  ALT  |  RET  |       |||       |  SPC  |  ALT  |  BKSP  |
 
 // NUM & SYMBOL / PROGRAMMING layer
 //| GRAVE |   @   |   <   |   >   |   '   |   ->  |                       |   $   |   #   |   &   |   |   |   ^   |  n/a  |
