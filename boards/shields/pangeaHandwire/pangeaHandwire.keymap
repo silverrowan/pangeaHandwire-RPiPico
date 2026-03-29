@@ -20,8 +20,10 @@
 &kp LSHIFT  &kp A    &kp S    &kp D    &kp F    &kp G                          &kp H    &kp J    &kp K     &kp L    &kp APOS  &kp RSHIFT
 &kp LCTRL   &kp Z    &kp X    &kp C    &kp V    &kp B                          &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RCTRL
 
-                    &none    &none      &kp LALT     &kp RET    &kp ESC    &none    &kp BSPC    &kp SPACE    &kp RALT    &none  
+    &kp ESC    &kp LGUI      &kp LALT     &kp RET    &kp TAB            &kp BSPC    &kp SPACE    &kp RALT    &kp RGUI     &kp DEL  
             >;
+
+//Keys to main layer Combo: </>="';:{}[]()-_ copy cut paste  rarrow
                     // &none    &kp     &kp LALT     &lt 3 RET    &kp   ||  &none    &kp     &lt 2 SPACE    &kp RALT    &kp  
 //layer 2 = num & ?
 //layer 3 = programming
@@ -36,18 +38,27 @@
 };
 
 
-//|  n/a  |   1   |   2   |   3   |   4   |   5   |                       |   6   |   7   |   8   |   9   |   0   |  n/a  |
+//| GRAVE |   1   |   2   |   3   |   4   |   5   |                       |   6   |   7   |   8   |   9   |   0   |  n/a  |
 //|  TAB  |   Q   |   W   |   E   |   R   |   T   |                       |   Y   |   U   |   I   |   O   |   P   |   ;   |
 //| SHIFT |   A   |   S   |   D   |   F   |   G   |                       |   H   |   J   |   K   |   L   |   '   | SHIFT |
 //|  CTRL |   Z   |   X   |   C   |   V   |   B   |                       |   N   |   M   |   ,   |   .   |   /   | CTRL  |
 //                           |       |  ALT  |  RET  |       |||       |  SPC  |  ALT  |  BKSP  |
 
 // SHIFT "layer" of base
-//|  n/a  |   !   |   @   |   #   |   $   |   %   |                       |   ^   |   &   |   *   |   (   |   )   |  n/a  |
+//| GRAVE |   !   |   @   |   #   |   $   |   %   |                       |   ^   |   &   |   *   |   (   |   )   |  n/a  |
 //|  TAB  |       |       |       |       |       |                       |       |       |       |       |       |   :   |
 //| SHIFT |       |       |       |       |       |                       |       |       |       |       |   "   | SHIFT |
 //|  CTRL |       |       |       |       |       |                       |       |       |   <   |   >   |   ?   | CTRL  |
 //                           |       |  ALT  |  RET  |       |||       |  SPC  |  ALT  |  BKSP  |
+
+// NUM & SYMBOL / PROGRAMMING layer
+//| GRAVE |   @   |   <   |   >   |   '   |   ->  |                       |   $   |   #   |   &   |   |   |   ^   |  n/a  |
+//|  TAB  |   ?   |   {   |   }   |   "   |   ,   |                       |   +   |   7   |   8   |   9   |   *   |   :   |
+//| SHIFT |   !   |   (   |   )   |   ;   |   =   |                       |   -   |   4   |   5   |   6   |   /   | SHIFT |
+//|  CTRL |   \   |   [   |   ]   |   :   |   _   |                       |   0   |   1   |   2   |   3   |   %   | CTRL  |
+//                           |       |  ALT  |  RET  |       |||       |  SPC  |  . (alt on hold)  |  =  |
+
+
 
 //Legend:
         // &kp - basic keypress behaviour
