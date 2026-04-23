@@ -1,7 +1,17 @@
-if SHIELD_PANGEA_HANDWIRE
+if SHIELD_PANGEA_HANDWIRE_L
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "pangeaHandwire"
+    default "pangeaHandwireL"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_PANGEA_HANDWIRE_L || SHIELD_PANGEA_HANDWIRE_R
+
+config ZMK_SPLIT
+    default y
 
 endif

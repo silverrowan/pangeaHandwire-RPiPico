@@ -1,10 +1,13 @@
 file_format: "1"
 id: pangeaHandwire
-name: Pangea Handwire RPi Pico
+name: Pangea Handwire Nano Clone
 type: shield
 url: https://github.com/silverrowan/pangeaHandwire-RPiPico
-requires: [rpi_pico]
+requires: 
+  - pro micro nano clone
 exposes:
 features:
   - keys
 siblings:
+  - pangeaHandwireR
+  - pangeaHandwireL
