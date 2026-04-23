@@ -39,6 +39,10 @@ ZMK_LAYER(default_layer,
     &kp ESC    &kp LGUI      &kp LALT     &kp RET    &kp TAB            &kp BSPC    &kp SPACE    &kp RALT    &kp RGUI     &kp DEL  
 )
 
+//PROBLEM KEYS:
+// Right side: shift, num-row, y-row, thumb bksp, thumb space unclear: ctrl, alt
+// left side: s, b 1-column, unlear: ctrl, esc
+
 //PLANNING:
 //Keys to main layer Combo: </>="';:{}[]()-_ copy cut paste  rarrow
 
