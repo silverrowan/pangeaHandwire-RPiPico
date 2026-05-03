@@ -19,7 +19,7 @@
 #
 ---
 include:
-  - board:  rpi_pico
+  - board:  nice_nano_v2
     shield: pangeaHandwireL
-  - board:  rpi_pico
+  - board:  nice_nano_v2
     shield: pangeaHandwireR

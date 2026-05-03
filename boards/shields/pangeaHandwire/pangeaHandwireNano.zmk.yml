@@ -4,7 +4,7 @@ name: Pangea Handwire Nano Clone
 type: shield
 url: https://github.com/silverrowan/pangeaHandwire-RPiPico
 requires: 
-  -  rpi_pico
+  - pro micro nano clone
 exposes:
 features:
   - keys
