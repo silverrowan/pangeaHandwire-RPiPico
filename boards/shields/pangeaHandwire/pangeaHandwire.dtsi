@@ -15,12 +15,18 @@
         row-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&gpio0 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+                    <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&gpio0 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 
-        col-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>,
-                    <&gpio0 11 GPIO_ACTIVE_HIGH>,
+        col-gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>,
+                    <&gpio0 13 GPIO_ACTIVE_HIGH>,
                     <&gpio0 12 GPIO_ACTIVE_HIGH>,
-                    <&gpio0 13 GPIO_ACTIVE_HIGH>;
+                    <&gpio0 11 GPIO_ACTIVE_HIGH>,
+                    <&gpio0 10 GPIO_ACTIVE_HIGH>,
+                    <&gpio0 2 GPIO_ACTIVE_HIGH>,
+                    <&gpio0 3 GPIO_ACTIVE_HIGH>,
+                    <&gpio0 4 GPIO_ACTIVE_HIGH>,
+                    <&gpio0 5 GPIO_ACTIVE_HIGH>;
     };
 
     default_transform: matrix_transform {
